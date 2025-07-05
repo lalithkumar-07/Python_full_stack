@@ -1,4 +1,4 @@
-.heading{
+/* .heading{
     color: aqua;
 }
 .b1{
@@ -16,4 +16,13 @@
 .b4{
     color: green;
     background-color: gray;
+} */
+button{
+    background-color: green;
+}
+.heading{
+    color: red;
+}
+#idtag{
+    background-color: rgb(144, 144, 223);
 }
