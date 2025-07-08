@@ -23,11 +23,11 @@ factorofnum(a)
 
 # def prime(a):
 #     c=0
-#     for i in range(1,int(a**1/2)):
-#         if a%i==0:
-#             c+=1
-#     if c>1:
-#         return False
+#     for i in range(1,int(a**0.5)+1):
+        # if a%i==0:
+        #     c+=1
+        # if c>1:
+        #   return False
 #     else:
 #         return True
 # a=int(input("given value:"))
