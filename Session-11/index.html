@@ -17,14 +17,19 @@
         border: 2px solid black;
         box-sizing: border-box;
         margin: 20px;
-        transition: 2s;
-        transition-delay: 2s;
+       
         animation: ease;
         animation-duration: 3s;
         animation-delay: 1s;
-        animation-name:none;
-        transform-origin: 2px;
-
+        animation-name:noe;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+    }
+    @keyframes noe{
+        0%{transform: rotateX(0deg);}
+        25%{transform: rotateX(90deg);}
+        50%{transform: rotateY(180deg);}
+        
     }
     .i2{
         border: 2px solid black;
