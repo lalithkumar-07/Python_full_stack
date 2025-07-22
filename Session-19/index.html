@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <button id="mylink" onclick="onepiece()">Submit</button>
+<body>    
+    <button id="l" onclick="onepiece()">Submit</button>
     <a href="https://www.youtube.com" target="_blank" id="myLink">youtube ki po ra</a>
+    <p>plain cotton t-shirt</p>
+    <p></p>
+    <button id="a" onclick="onepiece()">yellow</button>
+    <button id="i" onclick="onepiece()">orange</button>
 </body>
 <script>
 
+    document.getElementById("a").style.backgroundColor="orange";
+    document.getElementById("i").style.backgroundColor="yellow";
     function onepiece() {
-        document.getElementById("myLink").href = "https://www.youtube.com";
+        document.getElementById("l").href = "https://www.youtube.com";
         document.getElementById("myLink").innerHTML = "youtube ki po ra";
-         window.location.href = "https://www/google.com";
-         }
+    }
 </script>
 </html>
 
