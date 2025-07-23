@@ -1,0 +1,21 @@
+// let salary = 40000;
+// salary += 5000; 
+// salary -= 3000;
+// salary +=(salary * 0.1);
+// salary -= 500;
+// console.log(salary); 
+
+let rice= 100;
+let milk= 30;
+let fruits= 50;
+let subtotal = rice + milk + fruits;
+let discount = 0.05 *subtotal;
+let gst=(subtotal*0.08);
+let total = subtotal - discount + gst;
+console.log("milk: " + milk);
+console.log("rice: " + rice);
+console.log("fruits: " + fruits);
+console.log("Subtotal: " + subtotal);
+console.log("Discount: " + discount);
+console.log("GST: " + gst);
+console.log("Total: " + total);
