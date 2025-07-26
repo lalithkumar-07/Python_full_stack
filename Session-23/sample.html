@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Your youtube channel
+    <button onclick="butti()" class="buttio">Subscribe</button>
+
+    <script>
+        function butti(){
+            const tri=document.querySelector(".buttio")
+            if(tri.innerHTML === 'Subscribe'){
+                tri.innerHTML = 'Subscribed';
+                
+            }
+            else {
+                tri.innerHTML = 'Subscribe';
+            }
+        } 
+        // console.log(document.querySelector('button').innerHTML);
+        // document.querySelector('button').innerHTML='changed';
+        // const buttonelement=document.querySelector('.js-button');
+        // console.log(buttonelement);
+    </script>
+    
+</body>
+</html>
