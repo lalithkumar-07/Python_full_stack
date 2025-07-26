@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Amazon shipping calculator</p>
+    <input type="text" id="price" placeholder="Cost of item">
+    <button onclick="trip()">Calculate</button>
+    <p class="para"></p>
+</body>
+<script>
+    function trip() {
+        const cost = (document.getElementById("price").value);
+        let cot=Number(cost)
+        const parat = document.querySelector(".para");
+        if (cost !=="" && !isNaN(cot)) {
+            if (cot > 50) {
+                parat.innerHTML += `$${cot}`;
+            } else {
+                parat.innerHTML += `$${(cot + 10)}`;
+            }
+        } else {
+            parat.innerHTML = "Please enter a valid amount.";
+        }
+    }
+</script>
+</html>
