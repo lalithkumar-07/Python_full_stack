@@ -49,9 +49,48 @@
 }
 </style>
 <body>
-    <script>
+  <script>
+    
+    let todolist = [
+      {
+        text: "Learn HTML",uniqueNo: 1
+      },
+      {
+        text: "Learn CSS", uniqueNo: 2
+      },
+      {
+        text: "Learn JavaScript", uniqueNo: 3
+      }
+    ];
+    function addTodoItem(todos){
+      let checkboxId = "checkbox-" + todos.uniqueNo;
+      const container = document.getElementById('todo-container');
+      const todoItem = document.createElement('div');
+      todoItem.className = 'todo-item';
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = checkboxId;
+      const label = document.createElement('label');
+      label.setAttribute('for', checkboxId);
+      label.className = 'todo-label';
+      label.textContent = todos.text;
+      const deleteBtn = document.createElement('button');     
+      deleteBtn.className = 'delete-btn';
+      deleteBtn.innerHTML = '🗑';
+      deleteBtn.onclick = function () {
+          container.removeChild(todoItem);
+      };
+      todoItem.appendChild(checkbox);      
+      todoItem.appendChild(label);
 
-        const container = document.getElementById('todo-container');
+    }
+    checkbox.onclick = function () {
+        if (checkbox.checked) {
+            label.classList.add('strike');
+        } else {
+            label.classList.remove('strike');
+        }};
+      const container = document.getElementById('todo-container');
         
         // Create the main div
         const todoItem = document.createElement('div');
@@ -80,11 +119,11 @@
         
         
 
-  // Append all
-  todoItem.appendChild(checkbox);
-  todoItem.appendChild(label);
-  todoItem.appendChild(deleteBtn);
-  container.appendChild(todoItem);
+        // Append all
+        todoItem.appendChild(checkbox);
+        todoItem.appendChild(label);
+        todoItem.appendChild(deleteBtn);
+        container.appendChild(todoItem);
   </script>
   
 </body>
