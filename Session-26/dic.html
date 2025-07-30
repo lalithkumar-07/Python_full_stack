@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f9fc;
+  padding: 20px;
+}
+    
+.todo-item {
+  background-color: #e3f6fd;
+  padding: 10px 15px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+ 
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.strike {
+  text-decoration: line-through;
+}
+
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+
+}
+
+.todo-label {
+  flex: 1;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #444;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+</style>
+<body>
+    <script>
+
+        const container = document.getElementById('todo-container');
+        
+        // Create the main div
+        const todoItem = document.createElement('div');
+        todoItem.className = 'todo-item';
+        
+        // Create the checkbox
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = 'task1';
+        
+        // Create the label
+        const label = document.createElement('label');
+        label.setAttribute('for', 'task1');
+        label.className = 'todo-label';
+        label.textContent = 'Learn HTML'; 
+        
+        // Create the delete button
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.innerHTML = '🗑';
+        
+        // Delete functionality
+        deleteBtn.onclick = function () {
+            container.removeChild(todoItem);
+        };
+        
+        
+
+  // Append all
+  todoItem.appendChild(checkbox);
+  todoItem.appendChild(label);
+  todoItem.appendChild(deleteBtn);
+  container.appendChild(todoItem);
+  </script>
+  
+</body>
+</html>

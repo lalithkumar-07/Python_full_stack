@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .todo-item{
+        background-color: aqua;
+        
+    }
+</style>
+<body>
+    <!-- <input type="checkbox" name="" id=""> -->
+     <!-- <input type="checkbox"> -->
+      <!-- <label for="checkbox1">Check me!</label> -->
+    <script>
+        let inpele = document.createElement('input');
+
+        inpele.type = 'checkbox';
+        inpele.id = 'checkbox1';
+        let lab= document.createElement('label');
+        lab.setAttribute('for', 'checkbox1');
+        lab.textContent = 'Check me!';
+        document.body.appendChild(inpele);
+        document.body.appendChild(lab);
+    </script>
+</body>
+</html>

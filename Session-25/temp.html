@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo Item</title>
+  <style>
+    .todo-item {
+      background-color: lightblue;
+      padding: 10px;
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 5px;
+    }
+    .delete-btn {
+      cursor: pointer;
+      font-size: 20px;
+      border: none;
+      background: none;
+      color: red;
+      
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let todoItem = document.createElement('div');
+    todoItem.className = "todo-item";
+    let checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    checkbox.id = "mycheckbox";
+    let label = document.createElement('label');
+    label.setAttribute("for", "mycheckbox");
+    label.textContent = "Learn HTML";
+    let deleteBtn = document.createElement('button');
+    deleteBtn.className = "delete-btn";
+    deleteBtn.textContent = " 🗑";
+    deleteBtn.addEventListener('click', function () {      todoItem.remove();
+    });
+    todoItem.appendChild(checkbox);
+    todoItem.appendChild(label);
+    todoItem.appendChild(deleteBtn);
+    document.body.appendChild(todoItem);
+    // const container=document.getElementById('todo-container');
+    // const todoItem=document,createElement('div');
+    // todoItem.className='todo-item';
+    // const checkbox=document.createElement('input');
+    // checkbox.id='task1';
+    // const label=document.createElement('label');
+    // label.setAttribute('for','task1');
+    // label.className='todo-label';
+    // label.textContent='Learn Html';
+    // let deleteBtn = document.createElement('button');
+    // deleteBtn.className = "delete-btn";
+    // deleteBtn.textContent = " 🗑";
+    // deleteBtn.onclick=function(){
+    //     container.removeChild(toolItem);
+    // };
+    // todoItem.appendChild(checkbox);
+    // todoItem.appendChild(label);
+    // todoItem.appendChild(deleteBtn);
+    // document.body.appendChild(todoItem);
+  </script>
+</body>
+</html>
